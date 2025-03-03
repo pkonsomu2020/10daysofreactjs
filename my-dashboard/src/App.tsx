@@ -1,13 +1,19 @@
 import React from "react";
 import Navbar from "./components/Navbar";
-import Weather from "./components/Weather";
+import Card from "./components/Card";
+import Quote from "./components/Quote";  // Import Quote component
 
 const App: React.FC = () => {
   return (
-    <div className="bg-gray-100 min-h-screen">
+    <div className="bg-gray-100 min-h-screen p-6">
       <Navbar />
-      <div className="p-6">
-        <Weather />
+      <div className="grid grid-cols-3 gap-4">
+        <Card title="Users" content="Total: 1,245" />
+        <Card title="Revenue" content="$12,500" />
+        <Card title="Orders" content="325 new orders" />
+      </div>
+      <div className="mt-8">
+        <Quote />
       </div>
     </div>
   );
