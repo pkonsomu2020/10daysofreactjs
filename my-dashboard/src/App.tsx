@@ -1,13 +1,13 @@
 import React from "react";
 import Navbar from "./components/Navbar";
-import Pomodoro from "./components/Pomodoro";
+import Weather from "./components/Weather";
 
 const App: React.FC = () => {
   return (
     <div className="bg-gray-100 min-h-screen">
       <Navbar />
       <div className="p-6">
-        <Pomodoro />
+        <Weather />
       </div>
     </div>
   );
