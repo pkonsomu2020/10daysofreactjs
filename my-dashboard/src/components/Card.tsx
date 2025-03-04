@@ -1,16 +1,15 @@
-import React from "react";
+import { motion } from "framer-motion";
 
-interface CardProps {
-  title: string;
-  content: string;
-}
-
-const Card: React.FC<CardProps> = ({ title, content }) => {
+const Card = ({ title }: { title: string }) => {
   return (
-    <div className="p-4 border rounded-lg shadow-lg bg-white">
-      <h2 className="text-lg font-semibold">{title}</h2>
-      <p>{content}</p>
-    </div>
+    <motion.div
+      className="p-5 border rounded-lg shadow-md bg-white"
+      whileHover={{ scale: 1.05, boxShadow: "0px 10px 20px rgba(0, 0, 0, 0.2)" }}
+      initial={{ opacity: 0, y: 50 }}
+      animate={{ opacity: 1, y: 0, transition: { duration: 0.5 } }}
+    >
+      <h3 className="text-xl font-semibold">{title}</h3>
+    </motion.div>
   );
 };
 
